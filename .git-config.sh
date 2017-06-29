@@ -2,9 +2,10 @@
 # configure git
 # https://git-scm.com/docs/git-config
 
-echo "Don't forget to manually set user.name and user.email!"
+echo ""
+echo "**Don't forget to manually set user.name and user.email!**"
 echo "git config --global user.name \"John Doe\""
-echo "git config --global user.email johndoe@example.com"
+echo "git config --global user.email johndoe@example.com"; echo
 
 #set -x
 
@@ -31,13 +32,14 @@ git config --global --add difftool.prompt false
 git config --global core.editor vi
 
 # create global .gitignore file & add to config
-echo ".*.swp" > ~/.gitignore_global
+echo "*.swp" > ~/.gitignore_global
+echo ".*.swp" >> ~/.gitignore_global
 echo ".DS_Store" >> ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 
 # add global commit template to config
 # https://gist.github.com/adeekshith/cd4c95a064977cdc6c50
-git config --global commit.template ~/.git-commit-template.txt
+git config --global commit.template ~/.git_commit_template
 
 # prints out config when done
 git config --list
