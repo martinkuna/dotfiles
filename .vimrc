@@ -19,7 +19,6 @@ set hlsearch " highlight search matches
 set lazyredraw " buffer screen updates instead of updating all the time, reduce scrolling/large file lag and useful when playing back macros
 set noswapfile " Set dir for storing swap files
 set nu " show line numbers
-set number
 set ruler " show line and column number
 set showcmd " show pending/partial cmds
 set showmode " show current vim mode
@@ -54,7 +53,13 @@ autocmd FileType gitcommit set tw=72
 " GUI "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('gui_running')
-    set gfn=MonoSpace\ 9
+    if has('unix')
+        set gfn=MonoSpace\ 9
+    endif
+    if has('win32')
+        set gfn=Consolas
+        set backspace=indent,eol,start " Backspace how people expect
+    endif
     set guioptions=emgtLr
     set tabpagemax=100 " maximum number of tabs to open when using -p option
     set guitablabel=%t\ %r%m " show filename, if readonly , and if modified
