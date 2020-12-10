@@ -13,30 +13,15 @@ guake --rename-tab="htop" --execute="/usr/bin/htop"
 guake --new-tab --execute="/usr/bin/bash"
 guake --rename-current-tab="home"
 
-# OKL-master aka CLEAN dir
-guake --new-tab --execute="/usr/bin/bash"
-guake --execute="cd /home/$USER/OKL/repos/okl4-master/"
-guake --rename-current-tab="OKL-master"
-
-# OKL dir
-guake --new-tab --execute="/usr/bin/bash"
-guake --execute="cd /home/$USER/OKL/repos/okl4/"
-guake --rename-current-tab="OKL"
-
 # shell 0
 guake --new-tab --execute="/usr/bin/bash"
-guake --execute="cd /home/$USER/OKL/repos/"
+guake --execute="cd /home/$USER/"
 guake --rename-current-tab="shell 0"
 
 # shell 1
 guake --new-tab --execute="/usr/bin/bash"
-guake --execute="cd /home/$USER/OKL/repos/"
+guake --execute="cd /home/$USER/"
 guake --rename-current-tab="shell 1"
-
-# example
-guake --new-tab --execute="/usr/bin/bash"
-guake --execute="cd /home/$USER/OKL/repos/"
-guake --rename-current-tab="example"
 
 # create new tab, start bash session in it
 #guake --new-tab --execute="/usr/bin/bash"
